@@ -1,0 +1,38 @@
+@media(max-width: 768px) {
+    .errorContainer_Number {      
+        font-size: 160px;      
+    } 
+    .errorContainer_Link {
+        margin-top: 5rem;
+        }
+    }
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+    
+.errorContainer_Number{
+        font-size: 250px;
+        margin: 0;
+        color: red;
+}
+
+.errorContainer_Link{
+        margin-top: 3rem;
+        margin-bottom: 1.7rem;
+        font-size: medium;
+        text-decoration: underline;
+        color: red;
+}
+
+.errorContainer_Text {
+    font-size: large;
+    color: red ;
+}
+
+

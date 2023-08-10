@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+    color: #ff6060;
+}
+.nav-header {
+    display: block;
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .logo {
+        height: 4rem;
+    }
+}

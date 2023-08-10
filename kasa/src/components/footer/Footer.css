@@ -1,0 +1,50 @@
+.footer {
+    position: relative;
+    height: 20rem;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 25px 25px 0 0;
+}
+.footer_logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.footer-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+@media screen and (min-width: 0px) {
+    .footer {
+        font-size: 1rem;
+        line-height: 3rem;
+    }
+}
+@media screen and (min-width:576px) {
+    .footer {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        font-size: 1.7rem;
+        line-height: 3rem;
+    }
+}
+@media screen and (min-width:992px) {
+    .footer {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}

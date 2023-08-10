@@ -4,8 +4,11 @@ import Footer from "../components/footer/Footer";
 
 const Logement =() => {
     return (
-        <div>
+        <div className="logement">
             <Header/>
+            <main>
+                
+            </main>
             <Footer/>
         </div>
     );
