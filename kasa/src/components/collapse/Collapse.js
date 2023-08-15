@@ -1,13 +1,11 @@
 import React from 'react';
 import "../collapse/Collapse.css";
 import { useState } from "react";
-import closedArrow from "../../assets/images/accordeon/chevron-down-solid.svg";
-import openArrow from "../../assets/images/accordeon/chevron-up-solid.svg";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-
-// const closedArrow = <FontAwesomeIcon icon="fa-solid fa-chevron-up" style={{color: "#ffffff",}} />
-// const openArrow = <FontAwesomeIcon icon="fa-solid fa-chevron-down" style={{color: "#ffffff",}} />
+const closedArrow = <FontAwesomeIcon icon={faChevronUp} />
+const openArrow = <FontAwesomeIcon icon={faChevronDown}/>
 
 
 

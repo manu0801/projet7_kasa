@@ -1,26 +1,27 @@
-.housing_container {
-    width: 95%;
-    margin: 2rem auto 9rem auto;
+.home_container {
+    width: 100%;
+    margin: 0;
     background: #cac7c7;
-    border-radius: 0.8rem;
+    border-radius: 15px;
 }
-.housings_list {
+.home_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1rem;
     background: #faf9f9;
     border-radius: 15px;
+    list-style-type: none;
 }
 
 @media(max-width: 768px) {
-    .housings_container {
+    .home_container {
             background-color: transparent;
             margin: 0 0 7rem 0;
             padding: 0;
             width: 100%;
         }
-    .housing_list {
+    .home_list {
         padding: 0rem;
         }      
     }

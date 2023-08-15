@@ -1,56 +1,70 @@
-import React, {useState} from 'react';
-import NextArrow from "../../assets/carrousel/NextArrow.svg";
-import PreviousArrow from "../../assets/carrousel/PreviousArrow.svg";
+import React from 'react';
+import { NavLink, useParams } from 'react-router-dom';
+import housings from '../../datas/logement.json';
+import Collapse from '../collapse/Collapse';
+import Gallery from '../gallery/Gallery';
+import RatingScale from './Rating';
 import '../fiche logement/ficheLogement.css';
 
-function FicheLogement({ images }) {
-    const [current, setCurrent] = useState();
-    const length = images.length
-    const nextSlide = () => {
-        setCurrent(current === length -1 ? 0 : current +1)
-    }
-    const previousSlide = () => {
-        setCurrent(current === 0 ? length -1 : current -1)
-    }
-    if (!Array.isArray(images) || length <= 0) {
-        return null
-    }
-    return (
-        <div className='ficheLogement'>
-            {length > 1 && (
-                <img
-                    src={PreviousArrow}
-                    className='previousArrow'
-                    onClick={previousSlide}
-                    alt="Previous Arrow"
-                />
-            )}
-            {length > 1 && (
-                <img
-                    src={NextArrow}
-                    className='nextArrow'
-                    onClick={nextSlide}
-                    alt="Next Arrow"
-                />
-            )}
-            {
-                images.map((slider, index) => {
-                    return (
-                        <div className={index === current ? 'slide active' : 'slide'}
-                        key={`slider-{$index}`}>
-                            {index === current && (
-                                <img
-                                    src={slider}
-                                    alt={'slide' + (parseInt(index) + 1)}
-                                />
-                            )}
-                        </div>
-                    )
-                })
-            }
+const HousingFile = () => {
 
-        </div>
+    const { id } = useParams()
+    const housing = housings.find(housing => housing.id === id)
+    if (housing === undefined) { 
+        return <section className="error_page">
+            <p className="error_page_subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
+            <NavLink title='Accueil' end to='/home' className="error_page_link">Retourner sur la page d'accueil</NavLink> 
+        </section>
+    }
+
+    return (
+        <section key={housing.id} className='housing_page'>
+            <Gallery 
+                img={housing.pictures} 
+            />
+
+            <header className='housing_header'>
+                <article className='housing_header_infos'>
+                    <h1 className='housing_header_title'>{housing.title}</h1>
+                    <h2 className='housing_header_subtitle'>{housing.location}</h2>
+                    <div className='housing_header_tags'>
+                        {housing.tags.map((tag, i) => (
+                            <p key={i} className='housing_header_tags__tag'>{tag}</p>
+                        ))}
+                    </div>
+                </article>
+            
+                <article className='housing_hoster'>
+                    <div className='housing_hoster_infos'>
+                        <p className='housing_hoster_name'>{housing.host.name}</p>
+                        <img src={housing.host.picture} alt='host-cover' className='housing_hoster_img'/>
+                    </div>
+                    <RatingScale
+                        scaleValue={housing.rating}
+                    />
+                </article>
+            </header>
+
+            <article className='housing_collapses'>
+                <div className='housing_collapses_content'>
+                    <Collapse
+                        title='Description'
+                        content={housing.description}
+                    />
+                </div>
+                <div className='housing_collapses_content'>
+                    <Collapse
+                        title='Équipements'
+                        content={housing.equipments.map((equipment, i) => (
+                            <ul key={i}>
+                                <li>• {equipment}</li>
+                            </ul>
+                        ))}
+                    />
+                </div>
+            </article>
+        </section>
     )
 }
 
-export default FicheLogement
+export default HousingFile;

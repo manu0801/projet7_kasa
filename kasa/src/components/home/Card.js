@@ -3,12 +3,12 @@ import React from "react";
 
 const Card = ({ id, title, cover }) => {
 return (
-    <li key={id} className="housing">
+    <li key={id} className="home">
     <a href={"/housing/" + id}>
-        <figure className="housing_figure">
-        <img src={cover} alt={title} className="housing_cover" />
-        <figcaption className="housing_figcaption">
-            <h2 className="housing_title">{title}</h2>
+        <figure className="home_figure">
+        <img src={cover} alt={title} className="home_cover" />
+        <figcaption className="home_figcaption">
+            <h2 className="home_title">{title}</h2>
         </figcaption>
         </figure>
     </a>

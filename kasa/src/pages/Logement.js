@@ -1,16 +1,15 @@
 import React from "react";
 import Header from "../components/header/Header";
+import FicheLogement from "../components/fiche logement/FicheLogement"
 import Footer from "../components/footer/Footer";
 
 const Logement =() => {
     return (
-        <div className="logement">
-            <Header/>
-            <main>
-                
-            </main>
-            <Footer/>
-        </div>
+        <>
+        <Header />
+        <FicheLogement />
+        <Footer />
+    </>
     );
 };
 

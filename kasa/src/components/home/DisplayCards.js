@@ -5,8 +5,8 @@ import "./DisplayCards.css";
 
 const DisplayCards = () => {
     return(
-        <section className='housings_container'>
-            <ul className='housings_list'>
+        <section className='home_container'>
+            <ul className='home_list'>
                 {housings.map(({ id, title, cover }) => (
                     <Card
                         key={id}
