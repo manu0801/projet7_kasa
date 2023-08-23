@@ -11,6 +11,10 @@ const HousingFile = () => {
     const { id } = useParams()
     const housing = housings.find(housing => housing.id === id)
     if (housing === undefined) { 
+
+        // return (
+        //     <ErrorPage/>
+        // )
         return <section className="error_page">
             <p className="error_page_subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
             <NavLink title='Accueil' end to='/home' className="error_page_link">Retourner sur la page d'accueil</NavLink> 
@@ -53,7 +57,7 @@ const HousingFile = () => {
                     />
                 </div>
                 <div className='housing_collapses_content'>
-                    <Collapse
+                    <Collapse 
                         title='Équipements'
                         content={housing.equipments.map((equipment, i) => (
                             <ul key={i}>
@@ -62,7 +66,7 @@ const HousingFile = () => {
                         ))}
                     />
                 </div>
-            </article>
+            </article>        
         </section>
     )
 }

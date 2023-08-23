@@ -1,5 +1,6 @@
 import React from 'react'
 import Collapse from "../collapse/Collapse";
+import '../about/AboutContent.css'
 
 const AboutContent = () => {
     return(

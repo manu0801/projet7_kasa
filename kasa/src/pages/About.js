@@ -8,11 +8,11 @@ import Footer from "../components/footer/Footer";
 const About =() => {
     return (
         <div className="about">
-            <Header/>
-            <main>
-                <Banner image={imgAbout} />
+            <Header/>            
+            
+                <Banner image={imgAbout} />               
                 <AboutContent/>
-            </main>
+            
             <Footer/>
         </div>
     );

@@ -7,9 +7,9 @@ const Error =() => {
     return (
         <div>
             <Header/>
-            <main>
+            
                 <ErrorPage/>
-            </main>
+            
             <Footer/>
         </div>
     );

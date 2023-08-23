@@ -7,6 +7,8 @@ header {
     font-weight: 500;
     line-height: 3.4rem;
     color: #ff6060;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 .nav-header {
     display: block;
@@ -16,6 +18,8 @@ header {
     header {
         font-size: 1.2rem;
         line-height: 1.7rem;
+        margin-left: 0;
+        margin-right: 0;
     }
     .logo {
         height: 4rem;

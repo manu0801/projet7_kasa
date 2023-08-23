@@ -12,10 +12,10 @@ html {
   font-size: 62.5%;
   font-family: Montserrat, sans-serif;
 }
-body {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
+/* main {
+  margin-left: 25rem;
+  margin-right: 25rem;
+} */
 
 @media screen and (max-width : 767px) {
   body {

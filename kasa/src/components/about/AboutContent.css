@@ -1,0 +1,25 @@
+.about_collapse_content {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
+
+    @media(max-width: 768px) {
+        margin-left: 0;
+        margin-right: 0;        
+    }
+}
+.about_collapse {
+    margin-left: 10rem;
+    margin-right: 10rem;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;                       
+    }
+    @media (max-width: 425px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
