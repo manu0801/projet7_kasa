@@ -1,32 +1,25 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import housings from '../../datas/logement.json';
 import Collapse from '../collapse/Collapse';
 import Gallery from '../gallery/Gallery';
 import RatingScale from './Rating';
+import ErrorPage from '../error/ErrorPage'
 import '../fiche logement/ficheLogement.css';
 
 const HousingFile = () => {
-
     const { id } = useParams()
     const housing = housings.find(housing => housing.id === id)
-    if (housing === undefined) { 
-
-        // return (
-        //     <ErrorPage/>
-        // )
-        return <section className="error_page">
-            <p className="error_page_subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
-            <NavLink title='Accueil' end to='/home' className="error_page_link">Retourner sur la page d'accueil</NavLink> 
-        </section>
+    if (housing === undefined) {     
+        return (
+            <ErrorPage/>
+        )    
     }
-
     return (
         <section key={housing.id} className='housing_page'>
             <Gallery 
                 img={housing.pictures} 
             />
-
             <header className='housing_header'>
                 <article className='housing_header_infos'>
                     <h1 className='housing_header_title'>{housing.title}</h1>
@@ -36,8 +29,7 @@ const HousingFile = () => {
                             <p key={i} className='housing_header_tags__tag'>{tag}</p>
                         ))}
                     </div>
-                </article>
-            
+                </article>            
                 <article className='housing_hoster'>
                     <div className='housing_hoster_infos'>
                         <p className='housing_hoster_name'>{housing.host.name}</p>
@@ -48,7 +40,6 @@ const HousingFile = () => {
                     />
                 </article>
             </header>
-
             <article className='housing_collapses'>
                 <div className='housing_collapses_content'>
                     <Collapse

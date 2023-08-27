@@ -4,8 +4,7 @@ import DisplayCards from "../components/home/DisplayCards";
 import imgHomeBanner from "../assets/images/banner/imgHome.png";
 import Footer from "../components/footer/Footer";
 
-const Home = () => {
-    
+const Home = () => {    
     return (
     <>
         <Header />

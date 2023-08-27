@@ -7,9 +7,7 @@ const starGrey = <FontAwesomeIcon icon={faStar} />
 
 const RatingScale = (props) => {
     const scaleValue = props.scaleValue
-
     const range = [1, 2, 3, 4, 5]
-
     return (
         <div className='housing_hoster_ratings'>
             {range.map((rangeElem) =>

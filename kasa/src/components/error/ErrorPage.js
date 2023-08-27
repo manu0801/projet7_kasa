@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import "./ErrorPage.css";
 
 function NoPage() {
-    return (
-        
+    return (        
         <div className="errorContainer">
-            <p className="errorContainer_Number">404</p>
+            <p className="errorContainer_Number">
+                <h1>404</h1>
+            </p>
             <p className="errorContainer_Text">
                 oups, La page que vous demandez n'existe pas.
             </p>

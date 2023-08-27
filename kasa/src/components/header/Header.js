@@ -2,8 +2,6 @@ import "../header/Header.css";
 import logo from "../../assets/images/logo/LOGO.svg";
 import Navigation from "../../components/nav/Navigation";
 
-
-
 function Header() {
     return (       
         <header className="header">

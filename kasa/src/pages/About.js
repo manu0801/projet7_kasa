@@ -9,10 +9,8 @@ const About =() => {
     return (
         <div className="about">
             <Header/>            
-            
                 <Banner image={imgAbout} />               
-                <AboutContent/>
-            
+                <AboutContent/>            
             <Footer/>
         </div>
     );

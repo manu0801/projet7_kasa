@@ -9,8 +9,8 @@
     }
 }
 .about_collapse {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
 
     @media(max-width: 768px) {
         flex-direction: column;

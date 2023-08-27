@@ -15,7 +15,6 @@ const Gallery = (props) => {
         }
         return slideshowImg.width;
     }
-
     const onNext = () => {
         if(slideIdx === props.img.length - 1){
             setSlideIdx(0)
@@ -23,7 +22,6 @@ const Gallery = (props) => {
             setSlideIdx(slideIdx + 1)
         }
     }
-
     const onPrev = () => {
         if(slideIdx === 0){
             setSlideIdx(props.img.length - 1)
@@ -31,15 +29,13 @@ const Gallery = (props) => {
             setSlideIdx(slideIdx - 1)
         }
     }
-
     return (
         <div className='slideshow'>
             <div className='slideshow_container' style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
                 {props.img.map((picture, i) => 
                     <img className='slideshow_container_img' alt='banniere-page-logement' src={picture} key={i} />
                 )}
-            </div>
-            
+            </div>            
             {props.img.length > 1 && <>
             <div className='slideshow_controls'>
                 <i className='slideshow_controls_chevron' onClick={onPrev}>{angleLeft}</i>

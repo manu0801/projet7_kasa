@@ -6,10 +6,8 @@ import ErrorPage from "../components/error/ErrorPage";
 const Error =() => {
     return (
         <div>
-            <Header/>
-            
-                <ErrorPage/>
-            
+            <Header/>            
+                <ErrorPage/>            
             <Footer/>
         </div>
     );

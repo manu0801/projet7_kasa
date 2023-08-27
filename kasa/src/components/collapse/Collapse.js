@@ -7,16 +7,12 @@ import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const closedArrow = <FontAwesomeIcon icon={faChevronUp} />
 const openArrow = <FontAwesomeIcon icon={faChevronDown}/>
 
-
-
-
 const Collapse = (props) => {
     const [ openTab, setOpenTab ] = useState(false);
 
     const openTabHandler = () => {
         setOpenTab((openTab) => !openTab);
     };
-
     return (
         <>
             <div onClick={openTabHandler} className="collapse_header">
