@@ -5,7 +5,7 @@ import Collapse from '../collapse/Collapse';
 import Gallery from '../gallery/Gallery';
 import RatingScale from './Rating';
 import ErrorPage from '../error/ErrorPage'
-import '../fiche logement/ficheLogement.css';
+import './ficheLogement.css';
 
 const HousingFile = () => {
     const { id } = useParams()
